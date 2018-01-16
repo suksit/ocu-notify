@@ -38,10 +38,10 @@ parser.parseURL(FEED_URL, (err, parsed) => {
 
     switch (url.parse(course).hostname) {
       case 'www.udemy.com':
-        udemy.notify(entry, course)
+        udemy.notify(entry)
         break
       case 'www.eduonix.com':
-        eduonix.notify(entry, course)
+        eduonix.notify(entry)
         break
       default:
         simple.notify(entry)

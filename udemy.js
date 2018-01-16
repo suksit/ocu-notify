@@ -6,7 +6,10 @@ const tokens = require('./tokens.json')
 
 const NOTIFY_URL = 'https://notify-api.line.me/api/notify'
 
-const notify = (entry, course) => {
+const notify = (entry) => {
+  const $ = cheerio.load(entry.content)
+  const course = $('.take-btn a').attr('href')
+
   axios.get(course).then((res) => {
     const $ = cheerio.load(res.data)
 
