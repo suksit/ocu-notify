@@ -24,9 +24,9 @@ parser.parseURL(FEED_URL, (err, parsed) => {
     return
   }
 
-  const newEntries = parsed.feed.entries.filter((e1) => {
-    return oldEntries.filter((e2) => {
-      return e2.guid === e1.guid
+  const newEntries = parsed.feed.entries.filter((entry) => {
+    return oldEntries.filter((oldEntry) => {
+      return oldEntry.guid === entry.guid
     }).length === 0
   })
 
