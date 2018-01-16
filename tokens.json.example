@@ -4,7 +4,11 @@
     "value": "line-notify-access-token"
   },
   {
-    "name": "another-recipient-name",
+    "name": "javascript-related-group",
     "value": "another-line-notify-access-token"
+    "tags": [
+      "nodejs",
+      "javascript"
+    ]
   }
 ]

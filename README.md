@@ -14,17 +14,22 @@ Create ```tokens.json``` from the template:
 ```bash
 cp tokens.json.example tokens.json
 ```
-Then put LINE Notify access token(s) in ```tokens.json```. The ```name``` field is just a reminder and can be anything. For example,
+Then put LINE Notify access token(s) in ```tokens.json```. The ```name``` field is just a reminder and can be anything. You can also specify ```tags``` to only send notification when a feed entry's category matches one of these tags. For example,
 
 ```json
 [
   {
-    "name": "me",
+    "name": "Me",
     "value": "ulzku7sSCbd09sP163Yc4Dk4tOAQKj9UMpNTqY1bzll"
   },
   {
-    "name": "some group",
-    "value": "ab7e19UMpNTqY1bz5l0POs163Yc4DAQk4tSCbd09sKj"
+    "name": "JavaScript User Group",
+    "value": "ab7e19UMpNTqY1bz5l0POs163Yc4DAQk4tSCbd09sKj",
+    "tags": [
+      "javascript",
+      "nodejs",
+      "webpack"
+    ]
   }
 ]
 ```

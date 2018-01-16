@@ -19,9 +19,21 @@ const notify = (entry) => {
     const published = $('[data-purpose=last-update-date]').text().replace('ed', 'ed:').replace('\n', '').trim()
 
     tokens.forEach((token) => {
+      if (token.tags) {
+        const found = token.tags.find((tag) => {
+          return entry.categories.find((item) => {
+            return item._.toLowerCase() === tag.toLowerCase()
+          })
+        })
+
+        if (!found) {
+          console.log(`no matched tags for ${token.name}`)
+          return
+        }
+      }
+
       const title = entry.title
       const link = entry.link
-
       const data = {
         url: NOTIFY_URL,
         headers: {
