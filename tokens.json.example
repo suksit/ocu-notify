@@ -5,7 +5,7 @@
   },
   {
     "name": "javascript-related-group",
-    "value": "another-line-notify-access-token"
+    "value": "another-line-notify-access-token",
     "tags": [
       "nodejs",
       "javascript"
